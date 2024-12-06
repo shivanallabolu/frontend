@@ -32,7 +32,7 @@ function MyAccount() {
     e.preventDefault();
 
     try {
-      const response = await axios.put('http://localhost:999/budgetmanager/user/update', {
+      const response = await axios.put('https://backend-u3oi.onrender.com/budgetmanager/user/update', {
         userId: userDetails.userId,
         userName: userDetails.userName,
         userEmail: userDetails.userEmail,
