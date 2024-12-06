@@ -32,7 +32,7 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       // Call the logout API without assigning the response
-      await axios.get('http://localhost:999/budgetmanager/user/logout');
+      await axios.get('https://backend-u3oi.onrender.com/budgetmanager/user/logout');
   
       // Clear the local storage and update the authentication state
       localStorage.removeItem('user');
