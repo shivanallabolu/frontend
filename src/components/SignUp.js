@@ -38,6 +38,7 @@ function SignUp() {
       // If registration is successful, set the username and success message
       if (newUserName) {
         setUserName(newUserName);
+        console.log('Current userName state:', userName);
         alert(`Sign up successful! Welcome, ${newUserName}!`);
         window.location.href = '/signin';  // Redirect to SignIn page
 
