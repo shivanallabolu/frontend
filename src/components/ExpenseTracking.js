@@ -20,7 +20,7 @@ const ExpenseTracking = () => {
     if (!userId) return;
 
     const fetchExpenses = async () => {
-      const response = await fetch(`http://localhost:999/expense/${userId}`);
+      const response = await fetch(`https://backend-u3oi.onrender.com/expense/${userId}`);
       const data = await response.json();
 
       // Ensure each expense has a unique id (from the backend)
@@ -52,7 +52,7 @@ const ExpenseTracking = () => {
     const expenseData = { ...newExpense, userId };
     console.log('Sending expense data:', expenseData);
 
-    const response = await fetch(`http://localhost:999/expense/save/${userId}`, {
+    const response = await fetch(`https://backend-u3oi.onrender.com/expense/save/${userId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify([expenseData]),
@@ -80,7 +80,7 @@ const ExpenseTracking = () => {
     const updatedExpense = { ...newExpense, userId, id: editingId };
     console.log('Saving edited expense:', updatedExpense);
 
-    const response = await fetch(`http://localhost:999/expense/user/${userId}/expenses/${editingId}`, {
+    const response = await fetch(`https://backend-u3oi.onrender.com/expense/user/${userId}/expenses/${editingId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedExpense),
@@ -110,7 +110,7 @@ const ExpenseTracking = () => {
   };
 
   const deleteExpense = async (id) => {
-    const response = await fetch(`http://localhost:999/expense/user/${userId}/expenses/${id}`, {
+    const response = await fetch(`https://backend-u3oi.onrender.com/expense/user/${userId}/expenses/${id}`, {
       method: 'DELETE',
     });
 
