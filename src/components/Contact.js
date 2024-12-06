@@ -12,7 +12,7 @@ function Contact() {
     const contactData = { name, email, message };
 
     try {
-      const response = await fetch('http://localhost:999/api/contact/save', {
+      const response = await fetch('https://backend-u3oi.onrender.com/api/contact/save', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
