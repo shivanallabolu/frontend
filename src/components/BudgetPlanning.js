@@ -23,7 +23,7 @@ const BudgetPlanning = () => {
 
     const fetchBudgets = async () => {
       try {
-        const response = await fetch(`http://localhost:999/budget/${userId}`);
+        const response = await fetch(`https://backend-u3oi.onrender.com/budget/${userId}`);
         const data = await response.json();
         setBudgets(data.map((budget) => ({ ...budget, id: budget.id || `${budget._id}` })));
       } catch (error) {
@@ -52,7 +52,7 @@ const BudgetPlanning = () => {
 
     const budgetData = [{ ...newBudget, userId }];  // Wrap the newBudget in an array
     try {
-      const response = await fetch(`http://localhost:999/budget/save/${userId}`, {
+      const response = await fetch(`https://backend-u3oi.onrender.com/budget/save/${userId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(budgetData), // Send as an array
@@ -80,7 +80,7 @@ const BudgetPlanning = () => {
 
     const updatedBudget = { ...newBudget, userId, id: editingId };
     try {
-      const response = await fetch(`http://localhost:999/budget/user/${userId}/budgets/${editingId}`, {
+      const response = await fetch(`https://backend-u3oi.onrender.com/budget/user/${userId}/budgets/${editingId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedBudget),
@@ -113,7 +113,7 @@ const BudgetPlanning = () => {
   // Delete a budget
   const deleteBudget = async (id) => {
     try {
-      const response = await fetch(`http://localhost:999/budget/user/${userId}/budgets/${id}`, {
+      const response = await fetch(`https://backend-u3oi.onrender.com/budget/user/${userId}/budgets/${id}`, {
         method: 'DELETE',
       });
 
