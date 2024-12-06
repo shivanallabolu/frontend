@@ -26,11 +26,11 @@ const DataVisualization = () => {
 
     const fetchBudgetsAndExpenses = async () => {
       try {
-        const budgetResponse = await fetch(`http://localhost:999/budget/${userId}`);
+        const budgetResponse = await fetch(`https://backend-u3oi.onrender.com/budget/${userId}`);
         const budgetData = await budgetResponse.json();
         setBudgets(budgetData.map((budget) => ({ ...budget, id: budget.id || `${budget._id}` })));
 
-        const expenseResponse = await fetch(`http://localhost:999/expense/${userId}`);
+        const expenseResponse = await fetch(`https://backend-u3oi.onrender.com/expense/${userId}`);
         const expenseData = await expenseResponse.json();
         setExpenses(expenseData.map((expense) => ({ ...expense, id: expense.id || `${expense._id}` })));
       } catch (error) {
