@@ -31,24 +31,25 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      // Call the logout API
-      const response = await axios.get('http://localhost:999/budgetmanager/user/logout');
-
-      // If the logout was successful, clear the local storage
+      // Call the logout API without assigning the response
+      await axios.get('http://localhost:999/budgetmanager/user/logout');
+  
+      // Clear the local storage and update the authentication state
       localStorage.removeItem('user');
       setIsAuthenticated(false);
-
-      // Show the sign-out success message as an alert
+  
+      // Show a success message as an alert
       alert('Sign out successful!');
-
-      // Reload the page and redirect to the homepage
+  
+      // Reload the page and navigate to the homepage
       window.location.reload();
-      navigate('/'); // Optionally navigate to the homepage after reload
+      navigate('/'); // Redirect to homepage after reload
     } catch (err) {
       console.error('Error logging out:', err);
       alert('An error occurred while logging out.');
     }
   };
+  
 
   return (
     <header className={scrolled ? 'scrolled' : ''}>
