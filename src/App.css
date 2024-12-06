@@ -1,0 +1,175 @@
+/* General Reset and Basic Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #D76D77;  /* Pinkish gradient for hover */
+}
+
+/* Home Page Animations */
+.home {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Home Page Header */
+.home h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);  /* Pinkish Lavender Gradient */
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  animation: gradientBackground 5s ease infinite;
+}
+
+/* Home Page Paragraph */
+.home p {
+  font-size: 1.4rem;
+  color: transparent;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  animation: gradientBackground 5s ease infinite;
+  margin-bottom: 40px;
+}
+
+/* Button */
+button {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(145deg, #D76D77, #FFAF7B);  /* Lavender Pink Gradient */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Section Styles */
+.features1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.feature-item {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 -12px 24px rgba(255, 255, 255, 0.7);
+}
+
+.feature-item h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* General Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,112 @@
+/* Sign In Section */
+.signin {
+  padding: 50px 20px;
+  background: linear-gradient(145deg, #222, #333); /* Dark gradient background for Sign In */
+  text-align: center; /* Ensures everything inside the container is centered */
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  flex-direction: column; /* Stack the title and form vertically */
+}
+
+.signin h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Gradient for Sign In title */
+  -webkit-background-clip: text;
+  color: transparent; /* Make text color transparent to show the gradient */
+  font-weight: bold;
+  text-align: center; /* Keep title centered */
+}
+
+/* Sign In Form Container */
+.signin form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #444, #666); /* Dark gradient for form container */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  border: 1px solid #333;
+}
+
+/* Sign In Form Labels */
+.signin form label {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Gradient for label text */
+  -webkit-background-clip: text;
+  color: transparent;
+  align-self: flex-start;
+}
+
+/* Sign In Form Inputs */
+.signin form input,
+.signin form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #666;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #555, #444); /* Dark gradient for inputs */
+  color: #fff; /* White text inside inputs for readability */
+}
+
+/* Input Focus Effect */
+.signin form input:focus,
+.signin form textarea:focus {
+  border-color: #D76D77;
+  box-shadow: 0 0 8px rgba(215, 109, 119, 0.5);
+  outline: none;
+}
+
+/* Sign In Button */
+.signin form button {
+  padding: 12px;
+  background: linear-gradient(145deg, #D76D77, #FFAF7B); /* Gradient background for button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.signin form button:hover {
+  background: linear-gradient(145deg, #FFAF7B, #D76D77); /* Reverse gradient for hover effect */
+}
+
+/* Sign In Error Message */
+.signin .error {
+  color: red;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive adjustments for Sign In */
+@media (max-width: 768px) {
+  .signin form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin form {
+    max-width: 90%;
+  }
+
+  .signin form button {
+    width: 100%;
+  }
+}

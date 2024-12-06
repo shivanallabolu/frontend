@@ -1,0 +1,117 @@
+.myaccount {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #222, #333); /* Dark gradient background */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .myaccount h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Gradient for title */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Account Form Container */
+  .myaccount form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, #444, #666);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    border: 1px solid #333;
+  }
+  
+  /* Form Labels */
+  .myaccount form label {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+    align-self: flex-start;
+  }
+  
+  /* Form Inputs */
+  .myaccount form input {
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #555, #444);
+    color: #fff;
+  }
+  
+  /* Input Focus Effect */
+  .myaccount form input:focus {
+    border-color: #D76D77;
+    box-shadow: 0 0 8px rgba(215, 109, 119, 0.5);
+    outline: none;
+  }
+  
+  /* Buttons Container */
+  .myaccount .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .myaccount form button {
+    padding: 12px;
+    background: linear-gradient(145deg, #D76D77, #FFAF7B);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+  }
+  
+  .myaccount form button:hover {
+    background: linear-gradient(145deg, #FFAF7B, #D76D77);
+  }
+  
+  .myaccount .error {
+    color: red;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .myaccount .success {
+    color: green;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .myaccount form {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .myaccount form {
+      max-width: 90%;
+    }
+  }
+  

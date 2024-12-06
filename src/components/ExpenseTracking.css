@@ -1,0 +1,191 @@
+/* General page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+main {
+    flex-grow: 1; /* Take up the remaining space between header and footer */
+    overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+}
+
+/* Feature page styles */
+.feature-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top: 1cm; /* Adds 1 cm space from the top of the page */
+}
+
+.feature-page h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.feature-page p {
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 10px 0 30px;
+}
+
+/* Unified container for expense form and list */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Expense form styles */
+.expense-form {
+    flex: 1;
+    max-height: 100%; /* Ensure form doesn't overflow */
+    overflow-y: auto; /* Scroll if necessary */
+    max-width: 400px;
+    background: linear-gradient(145deg, #444, #666);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem; /* Center the form slightly below the heading text */
+}
+
+.expense-form input,
+.expense-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.expense-form button {
+    width: 100%;
+    background: linear-gradient(145deg, #D76D77, #FFAF7B);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expense-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.expense-form button + button {
+    margin-top: 10px; /* Adds space between Save and Cancel buttons */
+}
+
+/* Ensure Cancel button only has margin when editing */
+.expense-form button:last-child {
+    margin-left: 5px; /* Adds space to the Cancel button */
+}
+
+/* Expense list styles */
+.expense-list {
+    flex: 2;
+    max-height: 400px; /* Limit height of the list to keep it scrollable */
+    overflow-y: auto; /* Enable vertical scrolling for the list */
+    max-width: 800px;
+    width: 100%;
+    background: linear-gradient(145deg, #555, #777);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.expense-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.expense-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-list th,
+.expense-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    background: linear-gradient(145deg, #ff7e5f, #feb47b); /* Gradient text color */
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text color transparent so the gradient is visible */
+}
+
+.expense-list th {
+    background-color: #444;
+    font-weight: bold;
+}
+
+.expense-list tr:nth-child(even) {
+    background-color: #333;
+}
+
+.expense-list tr:hover {
+    background-color: #666;
+}
+
+/* Buttons in expense list */
+.expense-list button {
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expense-list button:hover {
+    background: linear-gradient(145deg, #feb47b, #ff7e5f);
+    transform: translateY(-2px);
+}
+

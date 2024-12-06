@@ -1,0 +1,244 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(145deg, #222, #333); /* Dark gradient background */
+  color: #eee; /* Light text color */
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Home Page Styles */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(to bottom, #222, #333); /* Dark gradient */
+  color: #eee;
+  padding: 20px;
+}
+
+/* Home Header with Enhanced Gradient and Shadow Effects */
+.home h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #FF4081, #FF80AB, #D500F9); /* Vibrant gradient */
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent; /* Text shows gradient */
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 12px; /* Rounded corners */
+  animation: gradientBackground 2s ease infinite; /* Faster gradient animation */
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Gradient animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home h1:hover {
+  transform: scale(1.08); /* Stronger zoom effect */
+}
+
+
+/* Subheading (Paragraph below the Header) */
+.home p {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #FF4081, #FF80AB, #D500F9); /* Vibrant gradient */
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  animation: gradientBackground 6s ease infinite;
+  max-width: 800px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  padding: 10px 25px; /* Add padding for space around text */
+  border-radius: 12px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home p:hover {
+  background-color: #FF80AB; /* Lighter gradient background on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+  color: #fff; /* Text turns white on hover */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow for text */
+}
+
+/* Features Section - Flexbox Layout */
+.features1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap; /* Responsive wrap */
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* Individual Feature Boxes */
+.feature-item {
+  flex: 1 1 280px;
+  background: linear-gradient(145deg, #444, #666) !important; /* Dark gradient background */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  opacity: 0;
+  animation: fadeInItem 1s ease-in-out forwards;
+  max-width: 350px;
+}
+
+/* Gradient Text for Titles and Descriptions in Feature Items */
+.feature-item h2, .feature-item p {
+  background: linear-gradient(90deg, #FF4081, #FF80AB, #D500F9); /* Vibrant gradient for text */
+  -webkit-background-clip: text; /* Safari and Chrome */
+  color: transparent; /* Makes the text color transparent so the gradient shows */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
+}
+
+/* Feature Box Titles */
+.feature-item h2 {
+  color: transparent; /* Make the text transparent */
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Apply the gradient to the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For modern browsers */
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+/* Feature Box Paragraphs */
+.feature-item p {
+  color: transparent; /* Make the text transparent */
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Apply the gradient to the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For modern browsers */
+  font-size: 1.2rem;
+  color: #ccc; /* Subtle light gray text */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Hover effect on feature items */
+.feature-item:hover {
+  transform: translateY(-15px); /* Lift effect */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9); /* Larger shadow */
+  filter: brightness(1.2);
+}
+
+/* Buttons inside the Feature Boxes */
+.feature-item button {
+  padding: 12px 25px;
+  background-color: #FF4081; /* Gradient-like pinkish color */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effect */
+.feature-item button:hover {
+  background-color: #FF80AB; /* Lighter gradient color for hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient Animation for Header and Paragraph */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation for feature items */
+@keyframes fadeInItem {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .features1 {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+  }
+
+  .feature-item {
+    background: linear-gradient(145deg, #444, #666);
+    color: white; /* Text color for contrast */
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 -12px 24px rgba(255, 255, 255, 0.7);
+  }
+  
+  .feature-item h2 {
+    color: transparent; /* Make the text transparent */
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Apply the gradient to the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For modern browsers */
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .feature-item p {
+    color: transparent; /* Make the text transparent */
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Apply the gradient to the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For modern browsers */
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .home h1 {
+    font-size: 3.5rem; /* Slightly smaller headline for mobile */
+  }
+
+  .home p {
+    font-size: 1.3rem;
+  }
+}

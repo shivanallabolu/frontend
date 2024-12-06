@@ -1,0 +1,266 @@
+/* General page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    overflow: auto; /* Allow scrolling */
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+main {
+    flex-grow: 1; /* Take up the remaining space between header and footer */
+    overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+    padding-bottom: 70px; /* Ensure there's enough space for footer */
+}
+
+/* Feature page styles */
+.feature-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top: 1cm; /* Adds 1 cm space from the top of the page */
+}
+
+.feature-page h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.feature-page p {
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 10px 0 30px;
+}
+
+/* Unified container for budget form and list */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Budget form styles */
+.budget-form {
+    flex: 1;
+    max-height: 100%; /* Ensure form doesn't overflow */
+    overflow-y: auto; /* Scroll if necessary */
+    max-width: 400px;
+    background: linear-gradient(145deg, #444, #666);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem; /* Center the form slightly below the heading text */
+}
+
+.budget-form input,
+.budget-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.budget-form button {
+    width: 100%;
+    background: linear-gradient(145deg, #D76D77, #FFAF7B);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.budget-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.budget-form button + button {
+    margin-top: 10px; /* Adds space between Save and Cancel buttons */
+}
+
+/* Ensure Cancel button only has margin when editing */
+.budget-form button:last-child {
+    margin-left: 5px; /* Adds space to the Cancel button */
+}
+
+/* Budget list styles */
+.budget-list {
+    flex: 2;
+    max-height: 400px; /* Limit height of the list to keep it scrollable */
+    overflow-y: auto; /* Enable vertical scrolling for the list */
+    max-width: 800px;
+    width: 100%;
+    background: linear-gradient(145deg, #555, #777);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.budget-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #D76D77, #FFAF7B);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.table-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+th {
+    background-color: #555;
+    background: linear-gradient(145deg, #D76D77, #FFAF7B); /* Apply gradient to header text */
+    -webkit-background-clip: text;
+    color: transparent; /* Ensure the gradient applies to the text itself */
+}
+
+td {
+    color: #fff; /* Regular text color for table data */
+}
+
+/* Buttons (Edit and Delete) */
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Edit button styles */
+button.edit-btn {
+    color: #D76D77;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+button.edit-btn:hover {
+    color: #FFAF7B;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Delete button styles */
+button.delete-btn {
+    color: #FF6B6B;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+button.delete-btn:hover {
+    color: #FFAF7B;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form content styling */
+form {
+    background-color: #333; /* Dark background for the form */
+    color: #fff; /* White text color for general content inside the form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, form select, form textarea {
+    background-color: #444; /* Slightly lighter background for inputs */
+    color: #fff; /* Ensure the text inside inputs is white */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #666; /* Border color to match the form theme */
+}
+
+form label {
+    color: #fff; /* Ensure labels are white */
+    font-size: 1rem;
+}
+
+/* Specific for any highlighted content, like the "Transport $20.00" */
+form .highlight-text {
+    color: #FFAF7B; /* Example color, you can adjust as needed */
+}
+
+/* Data visualization specific styles */
+.data-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.chart-container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Enable vertical scrolling inside the chart container */
+    max-height: 60vh; /* Set a max height for the chart container */
+    margin-bottom: 20px; /* Ensure space is kept for footer */
+}
+

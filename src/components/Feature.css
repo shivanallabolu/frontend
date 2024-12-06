@@ -1,0 +1,238 @@
+/* General Reset and Basic Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #222, #333); /* Dark gradient background for page */
+  color: #eee; /* Lighter text color for dark background */
+  overflow-x: hidden;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1e1e1e; /* Dark background for the app container */
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #D76D77;  /* Pinkish gradient for hover */
+}
+
+/* Home Page Animations */
+.home {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Home Page Header */
+.home h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);  /* Pinkish Lavender Gradient */
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  animation: gradientBackground 5s ease infinite;
+}
+
+/* Home Page Paragraph */
+.home p {
+  font-size: 1.4rem;
+  color: transparent;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  animation: gradientBackground 5s ease infinite;
+  margin-bottom: 40px;
+}
+
+/* Button */
+button {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(145deg, #D76D77, #FFAF7B);  /* Lavender Pink Gradient */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section Styles */
+.features {
+  padding-top: 120px;  /* Add space for the fixed header */
+  padding-bottom: 50px; /* Add space at the bottom */
+  background-color: #2a2a2a; /* Dark background color for the features section */
+  text-align: center;
+  color: #eee; /* Lighter text color for better contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-box {
+  background: linear-gradient(145deg, #444, #666); /* Dark gradient background for intro box */
+  color: #fff; /* Ensure text contrast */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  animation: shake-up-down 2s ease-in-out infinite;
+}
+
+.features h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #D76D77;  /* Pinkish color */
+  font-weight: bold;
+}
+
+.features .intro {
+  font-size: 1.2rem;
+  color: transparent; /* Make the text transparent */
+  background: linear-gradient(90deg, #D76D77, #FFAF7B); /* Apply the gradient to the text */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For modern browsers */
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Align feature container with intro box */
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.feature {
+  background: linear-gradient(145deg, #444, #666); /* Dark gradient background for feature boxes */
+  color: #fff; /* Ensure text contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: shake-left-right 2s ease-in-out infinite;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);  /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 20px 0;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #D76D77, #FFAF7B);  /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #D76D77; /* Pinkish color for icons */
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .feature-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Shake up and down animation for the intro box */
+@keyframes shake-up-down {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Shake left and right animation for feature boxes */
+@keyframes shake-left-right {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* General Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
