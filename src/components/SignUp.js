@@ -20,7 +20,7 @@ function SignUp() {
 
     try {
       // Make the POST request to the backend API to register the user
-      const response = await axios.post('http://localhost:999/budgetmanager/user/register', {
+      const response = await axios.post('https://backend-u3oi.onrender.com/budgetmanager/user/register', {
         userName: name,        // Change to match the backend field (userName)
         userEmail: email,      // Change to match the backend field (userEmail)
         userPassword: password // Change to match the backend field (userPassword)
